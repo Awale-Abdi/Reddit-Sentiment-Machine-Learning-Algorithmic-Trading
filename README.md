@@ -38,11 +38,16 @@ Even with **limited Reddit data and no paid tools**, the ML model **outperformed
 
 ## 📁 Project Structure
 
-- `algo_trading_proposal.pdf` – 1,500-word write-up with all results and references
-- `final_script_tree.py` – Full pipeline using Decision Tree Classifier
-- `final_script_xgboost.py` – Optimized pipeline using XGBoost
-- `writeup_visualizations.py` – Code for bar charts and histograms
-- `data/` – Historical stock data (via Yahoo Finance) + sentiment aggregates
+- `Datasets/`  
+  - `PFE_stock_data.csv` – Historical Pfizer stock data (downloaded via Yahoo Finance)  
+  - `reddit_sentiment_daily.csv` – Aggregated daily sentiment scores from Reddit posts (via API)
+ 
+- `Outputs/`  
+  - `algo_trading_proposal.pdf` – 1,500-word write-up with results, visuals, and references  
+  - `final_script_tree.py` – Full pipeline using Decision Tree Classifier  
+  - `final_script_xgboost.py` – Optimized pipeline using XGBoost  
+  - `writeup_visualizations.py` – Python code to generate financial performance charts and histograms  
+
 
 ## 🧩 Challenges & Limitations
 
