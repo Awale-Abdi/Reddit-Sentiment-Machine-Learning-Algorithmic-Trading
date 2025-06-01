@@ -40,15 +40,15 @@ Built independently in **VS Code** as part of the *Algorithmic Trading in Python
 
 ## 📁 Project Structure
 
+- `Data Sources (Live)`  
+  - **Reddit API** – Scraped sentiment data from `r/wallstreetbets` mentioning Pfizer  
+  - **Yahoo Finance API** (`yfinance`) – Historical Pfizer (PFE) stock data (2010–2024)
+
 - `Outputs/`  
   - `algo_trading_proposal.pdf` – 1,500-word academic write-up with results, visualizations, and references  
   - `final_script_tree.py` – Pipeline using Decision Tree Classifier  
   - `final_script_xgboost.py` – Pipeline using XGBoost  
   - `writeup_visualizations.py` – Charts comparing strategy metrics  
-
-- `Datasets/`  
-  - `PFE_stock_data.csv` – Historical Pfizer stock prices via Yahoo Finance  
-  - `reddit_sentiment_daily.csv` – Aggregated Reddit sentiment scores
 
 ## 🧩 Challenges & Limitations
 
