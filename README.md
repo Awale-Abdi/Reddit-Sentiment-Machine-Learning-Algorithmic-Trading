@@ -2,85 +2,84 @@
 
 ## 📊 Overview
 
-This project develops a full-cycle algorithmic trading strategy combining **social media sentiment analysis**, **machine learning (XGBoost & Decision Tree Classifiers)**, and **quantitative backtesting** using Pfizer Inc. (PFE) stock as a case study. The framework simulates how hedge funds and fintechs could use Reddit sentiment data and predictive modeling to make informed long/short decisions in equity markets.
+This project develops a full-cycle algorithmic trading strategy combining **Reddit sentiment analysis**, **machine learning (Decision Tree & XGBoost classifiers)**, and **quantitative backtesting** using Pfizer Inc. (PFE) stock data. It simulates how hedge funds and fintech firms might use alternative data and predictive modeling to make long/short trade decisions.
 
-Originally completed as part of the *Algorithmic Trading in Python* course taught by Professor Michael Rolleigh, this proposal-based project was independently built in VS Code and includes all relevant model code, backtests, and visualizations.
+The framework was built independently in **VS Code** as part of the *Algorithmic Trading in Python* course at Hult International Business School. It earned a **score of 90/100**, placing in the **top 30% of the class**, and led to a **recommendation letter offer** from Professor Michael Rolleigh based on the technical quality and clarity of the work.
 
 ## 🧠 Methodology
 
-- **Sentiment Analysis**: Scraped 1,000 Reddit posts from `r/wallstreetbets` using the Reddit API. Extracted sentiment polarity via `TextBlob`, aggregated into a daily sentiment index.
-- **Feature Engineering**: Created 25+ features including moving averages, RSI, MACD, ROC, Bollinger Bands, lagged returns, and Reddit sentiment scores.
-- **Models Tested**: 
-  - Decision Tree Classifier (with hyperparameter tuning)
-  - XGBoost Classifier (with grid search and feature selection)
-- **Trading Strategy Logic**:
-  - Go long on positive prediction, hold cash on negative.
-  - Monthly rebalancing logic built with custom `bt` framework strategy class.
+- **Sentiment Analysis**: Extracted ~1,000 Reddit posts mentioning "Pfizer" from `r/wallstreetbets`. Used `TextBlob` to generate sentiment scores, then aggregated by day.
+- **Feature Engineering**: Created 25+ features including moving averages, RSI, MACD, ROC, Bollinger Bands, lagged returns, and sentiment scores.
+- **Models Used**:  
+  - `DecisionTreeClassifier` with grid search tuning  
+  - `XGBoostClassifier` with optimized hyperparameters and feature selection
+- **Strategy Logic**:  
+  - Go long on positive prediction; hold cash on negative  
+  - Monthly rebalancing using custom `bt` framework strategy
 
 ## 🔁 Backtesting
 
-- **Benchmark Strategy**: Buy and Hold on PFE stock.
-- **Backtest Engine**: `bt` Python library; 1,000 simulation loops per strategy.
-- **Performance Metrics**:
-  - Total Return
-  - CAGR
-  - Max Drawdown
-  - Sharpe, Sortino, Calmar Ratios
+- **Benchmark Strategy**: Buy-and-hold for PFE
+- **Backtest Engine**: `bt` Python library; 1,000 simulation loops
+- **Performance Metrics**: Total Return, CAGR, Drawdowns, Sharpe, Sortino, Calmar Ratios
 
-### 📈 Backtest Summary
+### 📈 Sample Results Summary
 
 | Strategy         | Total Return | CAGR  | Max Drawdown | Sharpe Ratio |
 |------------------|--------------|-------|---------------|---------------|
 | Buy & Hold (PFE) | -26.84%      | -11%  | 57%           | -0.31         |
 | XGBoost Model    | +3.18%       | 1.19% | 24%           | 0.16          |
 
-Even with **limited Reddit data and no paid tools**, the ML model **outperformed** the benchmark on several metrics across multiple loops.
+Even with limited Reddit data and no paid tools, the ML model **outperformed** the benchmark in several key backtest loops, showing promising proof-of-concept performance.
 
 ## 📁 Project Structure
 
 - `Datasets/`  
-  - `PFE_stock_data.csv` – Historical Pfizer stock data (downloaded via Yahoo Finance)  
-  - `reddit_sentiment_daily.csv` – Aggregated daily sentiment scores from Reddit posts (via API)
- 
+  - `PFE_stock_data.csv` – Historical Pfizer stock data (via Yahoo Finance)  
+  - `reddit_sentiment_daily.csv` – Aggregated daily sentiment scores (via Reddit API)
+
 - `Outputs/`  
   - `algo_trading_proposal.pdf` – 1,500-word write-up with results, visuals, and references  
   - `final_script_tree.py` – Full pipeline using Decision Tree Classifier  
   - `final_script_xgboost.py` – Optimized pipeline using XGBoost  
-  - `writeup_visualizations.py` – Python code to generate financial performance charts and histograms  
-
+  - `writeup_visualizations.py` – Python code to generate performance charts and histograms  
 
 ## 🧩 Challenges & Limitations
 
-- **Reddit API Access**: Free tier limited to 1,000 posts; no access to Twitter sentiment data.
-- **Hardware Constraints**: Model runs limited to 1,000 loops vs. millions in institutional settings.
-- **Simplified NLP**: Used `TextBlob` instead of custom financial sentiment classifiers.
-- **Binary Classification**: Only predicted Up/Down instead of % change or multi-class.
+- **API Constraints**: Reddit API limited to 1,000 posts; no access to Twitter/X data
+- **Hardware Limits**: Simulations limited to 1,000 backtests vs. millions in industry
+- **Simple NLP**: Used `TextBlob` instead of custom sentiment classifiers
+- **Binary Output**: Predictions limited to Up/Down (classification); no regression or % change
 
-> 🔍 *"Despite model accuracy hovering around 51%, the project proves that with more data, compute power, and financial domain expertise, this framework could be refined into a deployable quant trading system."*
+> *Still, even with minimal data and basic modeling, the strategy often beat a buy-and-hold benchmark — validating this framework as a potential foundation for more scalable, real-world systems.*
 
 ## 🧠 Tools & Libraries
 
-- `Reddit API`, `TextBlob` – Sentiment scraping and NLP
+- `TextBlob`, `requests`, `Reddit API` – Sentiment data scraping
+- `pandas`, `ta`, `matplotlib` – Data analysis and feature creation
 - `yfinance` – Historical stock data
-- `pandas`, `ta`, `matplotlib` – Data analysis, indicators, and visualization
 - `scikit-learn`, `xgboost` – ML modeling
-- `bt` – Strategy definition and backtesting
+- `bt` – Custom strategy logic and portfolio backtesting
 
-## 🎓 Academic Context
+## 🏆 Academic Recognition
 
-Developed as part of the *Algorithmic Trading in Python* course (2024) at Hult International Business School with Prof. Michael Rolleigh. The goal was to simulate a real-world proposal that could be scaled by a hedge fund or fintech.
+- Scored **90/100** on this project in the *Algorithmic Trading in Python* course at Hult International Business School
+- Ranked in the **top 30%** of the class (grade: A)
+- Personally offered a **recommendation letter** by Professor Michael Rolleigh in recognition of the project's technical quality, end-to-end execution, and clear documentation
 
 ## 🔗 References
 
-- [Tran et al., 2024 – ML in Vietnamese Stock Market](https://doi.org/10.1057/s41599-024-02807-x)
-- [HAARMK Infotech – ML Stock Forecasting on Medium](https://medium.com/@haarmkinfotech/introduction-bc6ecaf22f8b)
-- [Reddit API Updates](https://www.redditinc.com/blog/apifacts)
+- Tran, P. et al. (2024). [ML in Vietnamese Stock Markets](https://doi.org/10.1057/s41599-024-02807-x)  
+- HAARMK Infotech. (2023). [ML for Stock Forecasting on Medium](https://medium.com/@haarmkinfotech/introduction-bc6ecaf22f8b)  
+- [Reddit API Documentation](https://www.redditinc.com/blog/apifacts)  
+- [Meta Graph API](https://developers.facebook.com)  
+- [Twitter API (X)](https://developer.x.com/en/docs/twitter-api/getting-started/about-twitter-api)
 
 ---
 
 ### 📧 Contact
 
-For questions or collaboration:
+For questions or collaborations:
 
-- Email: **awaleiabdi@outlook.com**
+- Email: **awaleiabdi@outlook.com**  
 - LinkedIn: [Awale Abdi](https://www.linkedin.com/in/awale-abdi/)
