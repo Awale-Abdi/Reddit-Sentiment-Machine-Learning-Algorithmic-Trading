@@ -60,7 +60,7 @@ Built independently in **VS Code** as part of the *Algorithmic Trading in Python
 ## 🏆 Academic Recognition
 
 - Received **90/100** for this project in *Algorithmic Trading in Python*  
-- Ranked in the **top 30% of the class** (A grade)  
+- Ranked in the **top 25% of the class** (A grade)  
 - Personally offered a **recommendation letter** by Professor Michael Rolleigh for technical quality and execution
 
 ## 🔗 References
