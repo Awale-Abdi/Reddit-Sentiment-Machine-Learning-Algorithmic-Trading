@@ -59,9 +59,13 @@ Built independently in **VS Code** as part of the *Algorithmic Trading in Python
 
 ## 🏆 Academic Recognition
 
-- Received highest possible letter grade for this project in *Algorithmic Trading in Python*  
-- Ranked in the **top 25% of the class** (A grade)  
-- Personally offered a **recommendation letter** by Professor Michael Rolleigh for technical quality and execution
+- Received the **highest possible letter grade** in *Algorithmic Trading in Python* (Hult International Business School, Summer 2024)
+- Ranked in the **top 25% of the class**
+- Personally offered a **recommendation letter** from Professor Michael Rolleigh (AI/ML & Finance) for technical quality, project leadership, and classroom excellence
+
+> *“Awale was an incredibly impressive student… He clearly demonstrated mastery of the material and its application by earning the highest possible grade. I would not hesitate to hire Awale as a research assistant and would be delighted to have him as a colleague.”*  
+> — **Professor Michael Rolleigh**, Hult International Business School
+
 
 ## 🔗 References
 
