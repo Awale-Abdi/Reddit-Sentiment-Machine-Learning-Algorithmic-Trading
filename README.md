@@ -4,7 +4,7 @@
 
 This project proposes an algorithmic trading framework combining **Reddit sentiment analysis**, **machine learning (Decision Tree & XGBoost classifiers)**, and **quantitative backtesting**, applied to Pfizer Inc. (PFE) stock data.
 
-Built independently in **VS Code** as part of the *Algorithmic Trading in Python* course at Hult International Business School, this proof-of-concept earned a **90/100** grade, placing in the **top 25%** of the class. It also earned the author a **recommendation letter offer** from Professor Michael Rolleigh for technical clarity and originality.
+Built independently in **VS Code** as part of the *Algorithmic Trading in Python* course at Hult International Business School, this proof-of-concept earned the highest possible letter grade, placing in the **top 25%** of the class. It also earned the author a **recommendation letter offer** from Professor Michael Rolleigh for technical clarity and originality.
 
 > ⚠️ **Disclaimer:** This model is not profitable or production-ready. It is an academic demonstration built with limited data and compute power. The goal is to show how a better-resourced team could develop and scale such a system.
 
@@ -59,7 +59,7 @@ Built independently in **VS Code** as part of the *Algorithmic Trading in Python
 
 ## 🏆 Academic Recognition
 
-- Received **90/100** for this project in *Algorithmic Trading in Python*  
+- Received highest possible letter grade for this project in *Algorithmic Trading in Python*  
 - Ranked in the **top 25% of the class** (A grade)  
 - Personally offered a **recommendation letter** by Professor Michael Rolleigh for technical quality and execution
 
