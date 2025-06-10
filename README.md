@@ -77,7 +77,7 @@ Built independently in **VS Code** as part of the *Algorithmic Trading in Python
 
 ---
 
-### 📧 Contact
+### 📧 Contact Me
 
 For questions or collaborations:
 
